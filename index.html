@@ -11,19 +11,21 @@
 
 <div id="growler">
   <div>
-    <label>
-      <input type="radio" value="breweries" v-model="searchIndex" />
-      Breweries
-    </label>
-    <br />
-    <label>
-      <input type="radio" value="pop-up churches" v-model="searchIndex" />
-      Pop-up Churches
-    </label>
+    <select v-model="selectedSearchIndex">
+      <option value="breweries">
+        Breweries
+      </option>
+      <option value="distilleries">
+        Distilleries
+      </option>
+      <option value="pop-up monasteries">
+        Pop-up Monasteries
+      </option>
+    </select>
   </div>
   <div>
     <small>
-      selected: {{ searchIndex }}
+      selected: {{ selectedSearchIndex }}
     </small>
   </div>
 </div>
