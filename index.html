@@ -11,21 +11,11 @@
 
 <div id="growler">
   <div>
-    <select v-model="selectedSearchIndex">
-      <option value="breweries">
-        Breweries
-      </option>
-      <option value="distilleries">
-        Distilleries
-      </option>
-      <option value="pop-up monasteries">
-        Pop-up Monasteries
-      </option>
-    </select>
+    <input v-model.trim="query" placeholder="Search..." />
   </div>
   <div>
     <small>
-      selected: {{ selectedSearchIndex }}
+      selected: {{ query }}
     </small>
   </div>
 </div>
