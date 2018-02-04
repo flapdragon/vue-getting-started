@@ -12,18 +12,18 @@
 <div id="growler">
   <div>
     <label>
-      <input type="checkbox" value="breweries" v-model="searchIndexes" />
+      <input type="radio" value="breweries" v-model="searchIndex" />
       Breweries
     </label>
     <br />
     <label>
-      <input type="checkbox" value="pop-up churches" v-model="searchIndexes" />
+      <input type="radio" value="pop-up churches" v-model="searchIndex" />
       Pop-up Churches
     </label>
   </div>
   <div>
     <small>
-      selected: {{ searchIndexes }}
+      selected: {{ searchIndex }}
     </small>
   </div>
 </div>
