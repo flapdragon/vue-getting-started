@@ -10,13 +10,13 @@
 <body>
 
 <div id="growler">
-  <h2
-    v-text="appName"
-    v-bind:class="{
-      'headers': true,
-      'accent-color': isOnline
-    }">
-  </h2>
+  <input
+    v-model="query"
+    placeholder="Search ...">
+    <br />
+    <div>
+      Searching for: {{ query }}
+    </div>
 </div>
 
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
