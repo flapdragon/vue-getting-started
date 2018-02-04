@@ -11,7 +11,11 @@
 
 <div id="growler">
   <div>
-    <input v-model.lazy.trim="query" placeholder="Search..." />
+    <button
+      type="button"
+      v-on:click="executeSearch">
+      Search
+    </button>
   </div>
   <div>
     <small>
