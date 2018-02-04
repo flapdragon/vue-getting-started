@@ -11,11 +11,11 @@
 
 <div id="growler">
   <div>
-    <input v-model.number="result" placeholder="2+3=..." />
+    <input v-model.lazy.trim="query" placeholder="Search..." />
   </div>
   <div>
     <small>
-      selected: {{ result }}
+      selected: {{ query }}
     </small>
   </div>
 </div>
