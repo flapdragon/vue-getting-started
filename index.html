@@ -10,8 +10,22 @@
 <body>
 
 <div id="growler">
-  <teaxtarea>{{ textareaValue }}</teaxtarea>
-  <textarea v-model="textareaValue"></textarea>
+  <div>
+    <label>
+      <input type="checkbox" value="breweries" v-model="searchIndexes" />
+      Breweries
+    </label>
+    <br />
+    <label>
+      <input type="checkbox" value="pop-up churches" v-model="searchIndexes" />
+      Pop-up Churches
+    </label>
+  </div>
+  <div>
+    <small>
+      selected: {{ searchIndexes }}
+    </small>
+  </div>
 </div>
 
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
