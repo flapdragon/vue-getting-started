@@ -10,13 +10,8 @@
 <body>
 
 <div id="growler">
-  <input
-    v-model="query"
-    placeholder="Search ...">
-    <br />
-    <div>
-      Searching for: {{ query }}
-    </div>
+  <teaxtarea>{{ textareaValue }}</teaxtarea>
+  <textarea v-model="textareaValue"></textarea>
 </div>
 
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
