@@ -2,6 +2,7 @@ var growler = new Vue({
   el: '#growler',
   data: {
     appName: 'Growler',
-    searchIndex: 'breweries'
+    selectedSearchIndex: 'breweries'
+    // selectedSearchIndex: [ 'breweries', 'distilleries' ] // doesn't work this way
   }
 })
