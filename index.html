@@ -10,11 +10,20 @@
 <body>
 
 <div id="growler">
-  <div v-on:click="grandparentClick">
-    <div v-on:click.self="parentClick">
-      <button v-on:click="executeSearch" type="button">Search</button>
+  <form action="#" method="POST">
+    <input
+      type="search"
+      v-model="query"
+      v-bind:disabled="isRunning" />
+    <div v-on:click="parentClick">
+      <button
+        type="button"
+        v-on:click.prevent.once="executeSearch"
+        v-bind:disabled="isRunning">
+        Search
+      </button>
     </div>
-  </div>
+  </form>
   <div>
     <small>
       selected: {{ query }}
