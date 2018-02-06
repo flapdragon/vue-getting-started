@@ -10,12 +10,14 @@
 <body>
 
 <div id="growler">
-  <div>
-    <button
-      type="button"
-      v-on:click="executeSearch">
-      Search
-    </button>
+  <div v-on:click.capture="clickGrandparent">
+    <div v-on:click.capture="clickParent">
+      <button
+        type="button"
+        v-on:click.capture="clickButton">
+        Search
+      </button>
+    </div>
   </div>
   <div>
     <small>
