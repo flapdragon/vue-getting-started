@@ -10,10 +10,11 @@
 <body>
 
 <div id="growler">
-  <form action="#" method="GET">
-    <input v-model="query" id="query" name="query" />
-    <button type="submit" v-on:click.prevent="executeSearch">Search</button>
-  </form>
+  <div v-on:click="grandparentClick">
+    <div v-on:clic.stop="parentClick">
+      <button v-on:click.stop="executeSearch" type="button">Search</button>
+    </div>
+  </div>
   <div>
     <small>
       selected: {{ query }}
