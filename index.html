@@ -11,8 +11,8 @@
 
 <div id="growler">
   <div v-on:click="grandparentClick">
-    <div v-on:clic.stop="parentClick">
-      <button v-on:click.stop="executeSearch" type="button">Search</button>
+    <div v-on:click.self="parentClick">
+      <button v-on:click="executeSearch" type="button">Search</button>
     </div>
   </div>
   <div>
