@@ -2,11 +2,17 @@ var growler = new Vue({
   el: '#growler',
   data: {
     appName: 'Growler',
-    query: 'the event is easier to see with text'
+    query: ''
   },
   methods: {
     executeSearch:function(event) {
-      console.log('query: ' + this.query + ', button: ' + event.target.innerText)
+      if (this.query) {
+        console.log('submit')
+        document.forms[0].submit()
+      }
+      else {
+        alert('Show me da qwaery')
+      }
     }
   }
 })
