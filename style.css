@@ -5,3 +5,6 @@
 .accent-color {
   color: #FF6A00;
 }
+[v-cloack] {
+  display: none;
+}

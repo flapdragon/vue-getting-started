@@ -10,16 +10,7 @@
 <body>
 
 <div id="growler">
-  <input type="search"
-    v-model.trim="query"
-    v-on:keypress.enter.prevent="executeNewSearch"
-    v-on:keyup.ctrl.enter="executeSearchInNewWindow"
-    placeholder="please enter your query here." />
-  <div>
-    <small>
-      selected: {{ query }}
-    </small>
-  </div>
+  <div v-cloak>{{ history }}</div>
 </div>
 
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
