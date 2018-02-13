@@ -7,11 +7,15 @@ var growler = new Vue({
   },
   methods: {
     executeSearch:function() {
-      this.isRunning = true
+      console.log('executeSearch')
+      // this.isRunning = true
       // document.forms[0].submit()
     },
     parentClick:function() {
       console.log('parentClick')
+    },
+    evaluateKey: function() {
+      console.log('evaluateKey')
     }
   }
 })
