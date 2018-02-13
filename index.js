@@ -1,3 +1,7 @@
+Vue.config.keyCodes = {
+  f1: 112
+}
+
 var growler = new Vue({
   el: '#growler',
   data: {
@@ -16,6 +20,9 @@ var growler = new Vue({
     },
     evaluateKey: function() {
       console.log('evaluateKey')
+    },
+    evaluateF1: function() {
+      console.log('evaluateF1')
     }
   }
 })

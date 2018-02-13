@@ -15,6 +15,7 @@
       type="search"
       v-model="query"
       v-on:keyup="evaluateKey"
+      v-on:keyup.f1="evaluateF1"
       v-on:keyup.enter="executeSearch" />
     <button
       type="button"
