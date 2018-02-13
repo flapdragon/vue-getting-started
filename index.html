@@ -10,19 +10,31 @@
 <body>
 
 <div id="growler">
-  <form v-on:submit.prevent action="..." method="GET">
-    <input
-      type="search"
-      v-model="query"
-      v-on:keyup="evaluateKey"
-      v-on:keyup.f1="evaluateF1"
-      v-on:keyup.enter="executeSearch" />
-    <button
-      type="button"
-      v-on:click.once="executeSearch">
-    Search
-    </button>
-  </form>
+  <div v-on:click="onBlockClickLeft">
+    Click in this area with the left mouse button.
+  </div>
+  <div v-on:mousedown.middle="onBlockClickMiddle">
+    Click in this area with the middle mouse button.
+  </div>
+  <div v-on:contextmenu.prevent="onBlockClickRight">
+    Click in this area with the right mouse button.
+  </div>
+  <ul
+    id="myContextMenu"
+    v-if="showContextMenu"
+    v-on:blur="closeContextMenu"
+    v-bind:style="{top:top, left:left}">
+    <li>
+      <a href="#" v-on:click="onCopyClick">
+        Copy
+      </a>
+    </li>
+    <li>
+      <a href="#" v-on:click="onPasteClick">
+        Paste
+      </a>
+    </li>
+  </ul>
   <div>
     <small>
       selected: {{ query }}

@@ -7,22 +7,36 @@ var growler = new Vue({
   data: {
     appName: 'Growler',
     query: '',
-    isRunning: false
+    showContextMenu: false,
+    top: '0px',
+    left: '0px'
   },
   methods: {
-    executeSearch:function() {
-      console.log('executeSearch')
-      // this.isRunning = true
-      // document.forms[0].submit()
+    onBlockClickLeft: function(e) {
+      console.log('onBlockClickLeft')
+      console.log('e.button', e.button)
     },
-    parentClick:function() {
-      console.log('parentClick')
+    onBlockClickMiddle: function(e) {
+      console.log('onBlockClickLeft')
+      console.log('e.button', e.button)
     },
-    evaluateKey: function() {
-      console.log('evaluateKey')
+    onBlockClickRight: function(e) {
+      console.log('onBlockClickLeft')
+      console.log('e.button', e.button)
+      this.showContextMenu = !this.showContextMenu
+      if (this.showContextMenu) {
+        this.top= e.y+ 'px'
+        this.left= e.x+ 'px'
+      }
     },
-    evaluateF1: function() {
-      console.log('evaluateF1')
+    closeContextMenu: function() {
+      console.log('closeContextMenu')
+    },
+    onCopyClick: function() {
+      console.log('onCopyClick')
+    },
+    onPasteClick: function() {
+      console.log('onPasteClick')
     }
   }
 })
