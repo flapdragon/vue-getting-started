@@ -12,31 +12,12 @@ var growler = new Vue({
     left: '0px'
   },
   methods: {
-    onBlockClickLeft: function(e) {
-      console.log('onBlockClickLeft')
-      console.log('e.button', e.button)
+    executeNewSearch: function() {
+      console.log('executeNewSearch')
     },
-    onBlockClickMiddle: function(e) {
-      console.log('onBlockClickLeft')
-      console.log('e.button', e.button)
-    },
-    onBlockClickRight: function(e) {
-      console.log('onBlockClickLeft')
-      console.log('e.button', e.button)
-      this.showContextMenu = !this.showContextMenu
-      if (this.showContextMenu) {
-        this.top= e.y+ 'px'
-        this.left= e.x+ 'px'
-      }
-    },
-    closeContextMenu: function() {
-      console.log('closeContextMenu')
-    },
-    onCopyClick: function() {
-      console.log('onCopyClick')
-    },
-    onPasteClick: function() {
-      console.log('onPasteClick')
+    executeSearchInNewWindow: function() {
+      console.log('executeSearchInNewWindow')
+      window.open(window.location.href, '_blank')
     }
   }
 })

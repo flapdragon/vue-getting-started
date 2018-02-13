@@ -10,31 +10,11 @@
 <body>
 
 <div id="growler">
-  <div v-on:click="onBlockClickLeft">
-    Click in this area with the left mouse button.
-  </div>
-  <div v-on:mousedown.middle="onBlockClickMiddle">
-    Click in this area with the middle mouse button.
-  </div>
-  <div v-on:contextmenu.prevent="onBlockClickRight">
-    Click in this area with the right mouse button.
-  </div>
-  <ul
-    id="myContextMenu"
-    v-if="showContextMenu"
-    v-on:blur="closeContextMenu"
-    v-bind:style="{top:top, left:left}">
-    <li>
-      <a href="#" v-on:click="onCopyClick">
-        Copy
-      </a>
-    </li>
-    <li>
-      <a href="#" v-on:click="onPasteClick">
-        Paste
-      </a>
-    </li>
-  </ul>
+  <input type="search"
+    v-model.trim="query"
+    v-on:keypress.enter.prevent="executeNewSearch"
+    v-on:keyup.ctrl.enter="executeSearchInNewWindow"
+    placeholder="please enter your query here." />
   <div>
     <small>
       selected: {{ query }}
